@@ -24,7 +24,6 @@ public class SaveManager : MonoBehaviour
 
         _savePath = Path.Combine(Application.persistentDataPath, "save.json");
         Debug.Log(Application.persistentDataPath);
-
     }
 
     /// <summary>
@@ -66,7 +65,7 @@ public class SaveManager : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError($"[SaveManager] Load failed: {e.Message}\n{e.StackTrace}");
-            // 로드 실패 시 새 세이브로 대체 (너무 공격적이면 백업 후 생성도 가능)
+            // 로드 실패 시 새 세이브로 대체
             CreateNewSave();
             Save();
         }
