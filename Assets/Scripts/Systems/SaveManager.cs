@@ -160,6 +160,8 @@ public class SaveManager : MonoBehaviour
 
         if (Data.regions == null) Data.regions = new();
         if (Data.globalSpecialInventory == null) Data.globalSpecialInventory = new();
+        if (Data.globalOreInventory == null) Data.globalOreInventory = new();
+
 
         // currentRegion이 regions에 없으면 생성
         Data.GetOrCreateRegion(Data.currentRegionId);

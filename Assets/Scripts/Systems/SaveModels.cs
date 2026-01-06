@@ -10,9 +10,15 @@ public class SaveData
     // Global
     public long globalMoney = 0;
     public string currentRegionId = "NA"; // 기본 시작 지역
+    public RegionProgress currentRegionProgress;
+
+    
 
     // 지역 전용 재료(글로벌) — 지금 단계에서는 "광물 인벤토리"로 써도 됨
+    public List<OreStack> globalOreInventory = new(); // 광물 인벤토리(글로벌)
+
     public List<OreStack> globalSpecialInventory = new();
+    
 
     // Regions
     public List<RegionProgress> regions = new();

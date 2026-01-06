@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: OreTable_NA
   m_EditorClassIdentifier: Assembly-CSharp::RegionOreTable
   regionId: 
-  chances: []
+  chances:
+  - ore: 0
+    chance: 0.5
+  - ore: 1
+    chance: 0.3
+  - ore: 2
+    chance: 0.15
+  - ore: 3
+    chance: 0.05

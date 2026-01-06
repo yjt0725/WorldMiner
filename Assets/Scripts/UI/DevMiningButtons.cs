@@ -25,23 +25,20 @@ public class DevMiningButtons : MonoBehaviour
         Refresh();
     }
 
+    
     public void AddDepth()
     {
-        if (RegionManager.I == null || RegionManager.I.CurrentProgress == null)
+        if (SaveManager.I == null || SaveManager.I.Data == null)
         {
-            Debug.LogWarning("[DevMiningButtons] CurrentProgress is null. (Init order?)");
+            Debug.LogWarning("[DevMiningButtons] SaveData not ready");
             return;
         }
 
-        var rp = RegionManager.I.CurrentProgress;
-        rp.depth += 1;
-        rp.minedTilesTotal += 1;
-
-        if (SaveManager.I != null)
-            SaveManager.I.Save();
+        
 
         Refresh();
     }
+
 
     public void Refresh()
     {
